@@ -11,7 +11,7 @@
     text-align: center;
     align-items: center;
   }
-  
+
   .projetos .container-projetos {
     padding: 0 30px;
   }
@@ -21,7 +21,23 @@
   }
 }
 
-@media(max-width: 425px) {
+* {
+  border: 1px solid #fff;
+}
+@media(max-width: 495px) {
+
+  
+  .cabecalho .menu li {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .cabecalho .menu ul a {
+    font-size: 12px;
+    text-align: center;
+  }
+
   .home .informacoes h1 {
     font-size: 30px;
   }
@@ -31,7 +47,7 @@
   }
 
   .home .container-foto img {
-      max-width: 320px;
+    max-width: 320px;
   }
 
   .projetos {
