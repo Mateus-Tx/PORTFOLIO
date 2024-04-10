@@ -54,6 +54,7 @@ body {
 
 .cabecalho .menu li a:hover {
   background: #38a2ff;
+  border-radius: 100px;
   color: #fff;
 }
 
