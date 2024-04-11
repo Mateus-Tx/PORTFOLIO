@@ -21,6 +21,7 @@
   }
 }
 
+
 @media(max-width: 495px) {
 
   
@@ -28,10 +29,11 @@
     width: 150px;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     
   }
   .cabecalho .menu ul a {
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
   }
 

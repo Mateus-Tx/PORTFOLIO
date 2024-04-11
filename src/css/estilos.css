@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
   background: linear-gradient(150deg, #000000, #38a2ff);
   background-size: 120% 120%;
+  user-select: none;
 }
 
 .cabecalho {
@@ -41,22 +42,23 @@ body {
   width: 400px;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  border-radius: 100px;
+  gap: 2rem;
 }
 
 .cabecalho .menu li a {
   font-size: 20px;
   text-transform: capitalize;
   padding: 8px 10px;
-  border-radius: 100px;
+  /* border-radius: 100px; */
   transition: 0.2s;
+  border:  1px solid #fff;
 }
 
 .cabecalho .menu li a:hover {
-  background: #38a2ff;
-  border-radius: 100px;
-  color: #fff;
+  /* background: #38a2ff; */
+  color: #38a2ff;
+  border-color: #38a2ff;
+  transform: scale(1.2);
 }
 
 .home {
@@ -95,12 +97,11 @@ body {
 
 .home .redes-sociais a i {
   border: solid 1px #fff;
-  /* border-radius: 50%; */
   width: 70px;
   height: 50px;
   padding: 10px;
   text-align: center;
-  font-size: 26px;
+  font-size: 30px;
   transition: all 0.3s ease;
 }
 
