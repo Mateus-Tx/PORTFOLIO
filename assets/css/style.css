@@ -1,0 +1,470 @@
+:root {
+  --cor-primaria: #007bff;
+  --cor-secundaria: #0056b3;
+  --claro: #f0f8ff;
+  --escuro: #0f172a;
+  --mais-escuro: #0a0f1c;
+  --vidro: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--escuro);
+  color: var(--cor-secundaria);
+  overflow-x: hidden;
+  max-width: 100vw;
+  margin: auto;
+}
+
+.barra {
+  display: none;
+}
+
+.menu-navegacao {
+  background-color: rgba(15, 23, 42, 0.5);
+  padding: 1rem 0;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.menu-navegacao ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.menu-navegacao li {
+  position: relative;
+}
+
+.menu-navegacao li::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 0px;
+  height: 5px;
+  background: var(--cor-primaria);
+  transition: 0.3s;
+}
+
+.menu-navegacao li:hover::after {
+  width: 100%;
+}
+
+.menu-navegacao a {
+  text-decoration: none;
+  color: var(--claro);
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 100vh;
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 4px solid var(--cor-primaria);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  animation: flutuar 2s ease-in-out infinite;
+  box-shadow: 0px 0px 30px var(--cor-primaria);
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.box-nomes {
+  margin-top: 1rem;
+  text-align: center;
+  flex-direction: column;
+}
+
+.meu-nome {
+  font-size: 3rem;
+  color: var(--claro);
+}
+
+.nome-descricao {
+  font-size: 1.2rem;
+  width: 500px;
+  color: var(--cor-primaria);
+}
+
+section {
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.titulo-gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--claro);
+}
+
+.gif.pokemon {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  transform: translateY(-46px);
+}
+
+.gif.fairy {
+  width: 220px;
+  height: auto;
+  position: absolute;
+  right: 350px;
+  top: 195px;
+}
+
+.gif.naruto {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 400px;
+}
+
+:root {
+  --caixa: {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    boder-radius: 16px;
+    boder: 3px solid var(--vidro);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.sobre-descricao {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--claro);
+  border-radius: 16px;
+  background: var(--vidro);
+  border: 3px solid var(--vidro);
+  backdrop-filter: blur(10px);
+}
+
+.sobre-descricao p {
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
+}
+
+.box-habilidades {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 900px;
+  flex-wrap: wrap;
+}
+
+.box-icon {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 3px solid var(--vidro);
+  border-radius: 8px;
+  color: var(--claro);
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 25px;
+  transition: transform 0.3s;
+}
+
+.box-icon i {
+  font-size: 50px;
+  color: var(--claro);
+  margin: 1rem;
+}
+
+.box-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.cards {
+  width: 350px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: var(--claro);
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+  transition: transform 0.5s;
+  border: 3px solid var(--vidro);
+  cursor: pointer;
+}
+
+.cards:hover {
+  transform: scale(1.05) translateY(5px);
+}
+
+.image-projetos {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cards a {
+  text-decoration: none;
+  color: var(--claro);
+}
+
+.box-textos {
+  padding: 1rem;
+}
+
+.name-projetos {
+  color: var(--claro);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+
+.texto-projetos {
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+.box-contato {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border: 3px solid var(--vidro);
+  border-radius: 16px;
+}
+
+.box-contato .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.box-contato .icon i {
+  font-size: 50px;
+  color: var(--claro);
+}
+
+.btn-enviar a {
+  color: var(--claro);
+  text-decoration: none;
+  padding: 1rem 10.7rem;
+}
+
+.btn-enviar:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 3px var(--cor-primaria);
+}
+
+.btn-enviar {
+  color: var(--claro);
+  background: linear-gradient(45deg,
+      var(--cor-primaria),
+      var(--cor-secundaria));
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5 ease;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--cor-secundaria);
+}
+
+footer {
+  color: var(--claro);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .barra {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .menu-navegacao {
+    display: none;
+  }
+
+  .menu-navegacao.ativo {
+    display: block;
+  }
+
+  .menu-navegacao li::after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    display: flex;
+    width: 0px;
+    height: 5px;
+    background: var(--cor-primaria);
+    transition: 0.3s;
+  }
+
+  .menu-navegacao li:hover::after {
+    width: 20%;
+  }
+
+  .menu-navegacao ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+  }
+
+  #abrir-barra,
+  #fechar-barra {
+    font-size: 24px;
+    color: var(--cor-primaria);
+    cursor: pointer;
+  }
+
+  #fechar-barra {
+    display: none;
+  }
+
+  .avatar img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .box-nomes {
+    margin-bottom: 7rem;
+    text-align: center;
+  }
+
+  .meu-nome {
+    font-size: 2rem;
+  }
+
+  .nome-descricao {
+    font-size: 1rem;
+  }
+
+  .titulo-gif {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gif {
+    width: 40px;
+  }
+
+  #sobre-mim .sobre-descricao {
+    max-width: 80%;
+    font-size: 15px;
+  }
+
+  #habilidades {
+    margin-bottom: 10vh;
+  }
+
+  .box-habilidades,
+  .box-projetos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-icon {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+  }
+
+  #projetos {
+    height: auto;
+  }
+
+  .cards {
+    width: 80%;
+  }
+
+  .box-contato {
+    width: 80%;
+  }
+
+  .btn-enviar a {
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
